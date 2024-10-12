@@ -26,25 +26,8 @@ let des = `*👋 Hello ${pushname} I'm alive now*
 
 > Qᴜᴇᴇɴ ᴄʜᴏᴏᴛʏ ɴᴇʟᴜᴍɪ ᴍᴅ
 `
-let opts = {
-                image: `https://8030.us.kg/file/zOm4HoO6YnQR.jpg`,
-                header: '',
-                footer: config.FOOTER,
-                body: sssf
-		}
 
-    return await conn.sendButtonMessage(from, buttons, m, opts)	
-	await conn.sendMessage(from, {
-text: commandList,
-  contextInfo: {
-    mentionedJid: [ '' ],
-    groupMentions: [],
-    forwardingScore: 1111,
-    isForwarded: true,
-    forwardedNewsletterMessageInfo: {
-      newsletterJid: '120363316527550485@newsletter',
-      serverMessageId: 127
-    },
+return await conn.sendMessage(from,{image: {url:"https://8030.us.kg/file/zOm4HoO6YnQR.jpg"},caption: des},{quoted: mek})
 }catch(e){
 console.log(e)
 reply(`${e}`)
